@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        Hello world!
+    </div>
+    <script src="lib/simpledom-core.js"></script>
+    <script>
+        window.addEventListener('load', function(){
+
+            var div = SD('div')
+            div.style({ color: 'red' })
+                .text('Hello new text!')
+                .style({ fontSize: '30px' })
+                .style('backgroundColor', 'grey')
+
+        })
+    </script>
+</body>
+</html>
