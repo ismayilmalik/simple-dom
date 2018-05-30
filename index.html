@@ -7,18 +7,16 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="container">
+    <div id="container">
         Hello world!
     </div>
     <script src="lib/simpledom-core.js"></script>
     <script>
         window.addEventListener('load', function(){
 
-            var div = SD('<div>')
-            div.style({ color: 'red' })
-                .text('Hello new text!')
-                .style({ fontSize: '30px' })
-                .style('backgroundColor', 'grey')
+            var div = SD('#container')
+            div.css('color:red;font-size:12px;font-weight:bold;')
+                .html('<p><b>Hello</b> World!</p>')
 
         })
     </script>
