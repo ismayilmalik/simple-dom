@@ -8,17 +8,12 @@
 </head>
 <body>
     <div id="container">
-        Hello world!
+        <p>sdfdfgdfgdfgsdf <span>dfgdfgdfgdfgdfgdfg</span> dsfddfgdfgdfsf</p>
     </div>
-    <script src="lib/simpledom-core.js"></script>
     <script>
-        window.addEventListener('load', function(){
-
-            var div = SD('#container')
-            div.css('color:red;font-size:12px;font-weight:bold;')
-                .html('<p><b>Hello</b> World!</p>')
-
-        })
+        document.body.addEventListener("click", function(e){
+            console.log(e.target)
+        }, true)
     </script>
 </body>
 </html>
