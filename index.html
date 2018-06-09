@@ -7,20 +7,13 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="container">
-        Hello world!
+    <div id="container">
+        <p>sdfdfgdfgdfgsdf <span>dfgdfgdfgdfgdfgdfg</span> dsfddfgdfgdfsf</p>
     </div>
-    <script src="lib/simpledom-core.js"></script>
     <script>
-        window.addEventListener('load', function(){
-
-            var div = SD('<div>')
-            div.style({ color: 'red' })
-                .text('Hello new text!')
-                .style({ fontSize: '30px' })
-                .style('backgroundColor', 'grey')
-
-        })
+        document.body.addEventListener("click", function(e){
+            console.log(e.target)
+        }, true)
     </script>
 </body>
 </html>
