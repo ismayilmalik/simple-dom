@@ -1,19 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 </head>
+
 <body>
-    <div id="container">
-        <p>sdfdfgdfgdfgsdf <span>dfgdfgdfgdfgdfgdfg</span> dsfddfgdfgdfsf</p>
-    </div>
+    <button id="xhrbtn">Go...</button>
+    <script src="lib/simpledom-core.js"></script>
+    <script src="lib/simpledom-http.js"></script>
     <script>
-        document.body.addEventListener("click", function(e){
-            console.log(e.target)
-        }, true)
+        document.addEventListener('load', function(){
+            $("#xhrbtn").click(function(e){
+                $().request({
+                    method: 'GET',
+                    url: 'https://jsonplaceholder.typicode.com/posts/1',
+                    onsuccess: function(resp) {
+                        console.log('SUCCESS:', resp)
+                    },
+                    onerror: function(err){
+                        console.log('ERROR:', err)
+                    },
+                    headers: {
+                        'Demo-Header': 'Demo-Header'
+                    }
+                })
+            })
+        })
     </script>
 </body>
+
 </html>
